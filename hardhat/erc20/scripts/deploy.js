@@ -30,7 +30,7 @@ async function main() {
     const WatermelonToken = await hre.ethers.getContractFactory("WatermelonToken");
     const watermelonToken = await WatermelonToken
         .connect(deployerWallet)
-        .deploy(1000000);
+        .deploy(1000000000);
     await watermelonToken.deployed();
 
     console.log("WatermelonToken deployed to:", watermelonToken.address);
